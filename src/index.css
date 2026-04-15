@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-blue: #0A0F3C;
+  --color-dark-blue: #111A5A;
+  --color-vibrant-blue: #2F5BFF;
+  --color-neon-blue: #4C7BFF;
+  --color-light-blue: #6FA3FF;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-deep-blue text-white font-sans antialiased;
+  }
+}
+
+@keyframes drip {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.1); }
+  100% { transform: scaleY(1); }
+}
+
+.animate-drip {
+  animation: drip 3s ease-in-out infinite;
+}
